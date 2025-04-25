@@ -42,9 +42,21 @@ const qtdelivros = Number(prompt('quantos livros salvos:'))
 for (let i = 1; i <= qtdelivros; i++) {
     let livro = prompt('nome do livro')
     livros.push(livro)
-    let index = i-1
-    console.log(livros[index])
+    let index = i - 1
+    console.log(livros)
 
 }
+console.log(livros)
+const nomeLivro = prompt('digite o nome do livro')
+
+const livroRemovido = livros.indexOf(nomeLivro)
+// pesquisa o livro
+console.log('livroRemovido', livroRemovido)
+
+if (livroRemovido != -1) {
+    livros.splice(livroRemovido, 1)
+}
+
+
 console.log(livros)
 
